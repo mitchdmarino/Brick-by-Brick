@@ -15,8 +15,8 @@ export function initDB() {
 
     CREATE TABLE IF NOT EXISTS bricks (
       id             INTEGER PRIMARY KEY,
-      wall_id        INTEGER NOT NULL REFERENCES walls(id) ON DELETE CASCADE
-      date_completed TEXT DEFAULT (datetime('now'))
+      wall_id        INTEGER NOT NULL REFERENCES walls(id) ON DELETE CASCADE,
+      date_completed TEXT DEFAULT (datetime('now')), 
       created_at     TEXT DEFAULT (datetime('now'))
     );
   `);
