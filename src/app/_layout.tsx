@@ -7,5 +7,7 @@ export default function RootLayout() {
     initDB();
   }, []);
 
-  return <Stack />;
+  return <Stack>
+    <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+  </Stack>
 }
